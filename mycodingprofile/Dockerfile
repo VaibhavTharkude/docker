@@ -12,6 +12,7 @@ COPY mycodingprofile.zip /var/www/html/mycodingprofile.zip
 WORKDIR /var/www/html
 #we are unzipping and extracting the source code in default deployment enviornment location
 RUN unzip mycodingprofile.zip
+RUN mv mycodingprofile/mycodingprofile/* .
 #we are exposing our container to a port
 EXPOSE 80
 #we are providing container a processs 
